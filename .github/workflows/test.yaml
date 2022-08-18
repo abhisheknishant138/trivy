@@ -15,7 +15,7 @@ env:
 jobs:
   test:
     name: Test
-    runs-on: cirun-arm-runner
+    runs-on: [self-hosted, linux]
     steps:
       - uses: actions/checkout@v3
 
