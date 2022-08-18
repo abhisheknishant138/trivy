@@ -1,13 +1,9 @@
 runners:
-  - name: aws-runner
-    # Cloud Provider: AWS
+  - name: aws-cpu-arm-runner
     cloud: aws
-    # Cheapest VM on AWS
-    instance_type: t2.nano
-    # Ubuntu-20.4, ami image
-    machine_image: ami-06fd8a495a537da8b
+    instance_type: a1.medium
+    # AMI for ubuntu/images/hvm-ssd/ubuntu-focal-20.04-arm64-server
+    machine_image: ami-0229f8cfc24033d05
     preemptible: false
-    # Add this label in the "runs-on" param in .github/workflows/<workflow-name>.yml
-    # So that this runner is created for running the workflow
     labels:
-      - cirun-aws-runner
+      - cirun-arm-runner
